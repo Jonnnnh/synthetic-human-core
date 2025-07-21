@@ -36,42 +36,7 @@ Ensure your `spring.factories` or `META-INF/spring/org.springframework.boot.auto
 
 ---
 
-## 3. Configuration (application.yml)
-
-```yaml
-app:
-   executor:
-      core-pool-size: 4
-      max-pool-size: 10
-      queue-capacity: 100
-   audit:
-      mode: console
-      topic: audit.logs
-
-spring:
-   kafka:
-      bootstrap-servers: localhost:9092
-      producer:
-         key-serializer: org.apache.kafka.common.serialization.StringSerializer
-         value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-
-management:
-   endpoints:
-      web:
-         exposure:
-            include: health,metrics,prometheus
-
-logging:
-   level:
-      org.springframework.aop: DEBUG
-      com.example.synthetichumancore.aspect.AuditAspect: DEBUG
-```
-
-> Default `mode=console` writes audit events to the application log
-
----
-
-## 4. Try It with the Bishop-Prototype Emulator
+## 3. Try It with the Bishop-Prototype Emulator
 
 1. Clone and navigate:
 

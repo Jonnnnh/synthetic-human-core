@@ -1,6 +1,6 @@
 package com.example.synthetichumancore.exception;
 
-import com.example.synthetichumancore.dto.ErrorResponse;
+import com.example.synthetichumancore.response.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

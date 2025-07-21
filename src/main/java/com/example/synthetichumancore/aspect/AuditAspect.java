@@ -59,8 +59,8 @@ public class AuditAspect {
 
     private void sendEvent(String phase, AuditEvent ev) {
         ev.setPhase(phase);
-        if ("kafka".equalsIgnoreCase(props.getMode())) {
-            CompletableFuture<?> future = kafkaTemplate.send(props.getTopic(), ev);
+        if ("kafka".equalsIgnoreCase(props.mode())) {
+            CompletableFuture<?> future = kafkaTemplate.send(props.topic(), ev);
             future.whenComplete((res, ex) -> {
                 if (ex != null) {
                     log.error("Не удалось отправить AuditEvent ({}): {}", phase, ev, ex);

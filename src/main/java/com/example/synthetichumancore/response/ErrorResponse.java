@@ -1,4 +1,4 @@
-package com.example.synthetichumancore.dto;
+package com.example.synthetichumancore.response;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
